@@ -1,6 +1,10 @@
 :root{
     --min-desktop-breakpoint:1024px;
     --max-desktop-breakpoint:1440px;
+    --recipe-title-color: hsl(24, 5%, 18%);
+    --key-step-color:hsl(30, 10%, 34%);
+    --main-text-color: hsl(30, 10%, 34%);
+    --primary-important-color:hsl(14, 45%, 36%);
 }
 @font-face {
     font-family: 'Main-font';
@@ -12,14 +16,25 @@
 }
 *, *::after, *::before{
     margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 body{
+    background:hsl(0, 0%, 100%);
     font-size:16px;
     font-family: 'Main-font', sans-serif;
+    color:var(--main-text-color);
 }
-.intro{
-    height:300px;
+.intro-title{
+    color:var(--recipe-title-color);
+    padding:20px;
+}
+.intro-title, .section-title{
+    font-weight: 200;
+    font-family: 'Title-font', sans-serif;
+}
+.intro > p{
+    padding: 0 20px;
 }
 .hero-img{
     width:100vw;
@@ -28,7 +43,75 @@ body{
 .hero-img img {
     max-width: 100%;
     height: auto;
-    display: block; /* Ensures that the image doesn't have extra space beneath it */
+    display: block; 
 }
 
+main{
+    margin:20px auto;
+    width:80%;
+}
+.section-title{
+    color: var(--primary-important-color);
+    padding-bottom:10px;
+}
+/* .section-divider{
+    margin:20px 0;
+} */
+main .ingredients ul, main .instructions ol{
+    margin-left:25px;
+}
+main .ingredients ul li, main .instructions ol li{
+    padding:5px;
+}
+/* Preparation */
+main .preparation-time{
+    border-radius:10px;
+    padding:20px;
+    background:hsl(330, 100%, 98%);
+    
+}
+main .preparation-time .preparation-title{
+    font-weight: 600;
+    font-size:1.2em;
+    color:hsl(332, 51%, 32%);
+}
+main .preparation-time ul li {
+    padding:10px;
+    margin-left:30px;
+}
+/* Ingredients */
+main .ingredients{
+    padding-bottom:20px;
+    margin-top: 20px;
+}
+main .instructions{
+    margin-top:20px;
+    padding-bottom:20px;
+}
+/* Nutrition */
+main .nutrition{
+    margin-top:20px;
+}
+.nutrition > p{
+    padding-bottom: 15px;
+}
+.nutrition table{
+    width:100%;
+}
+.nutrition table tr td{
+    padding:15px 0;
+}
+.nutrition table tr td:first-child  {
+    padding-left:25px;
+}
+.nutrition table tr:nth-child(-n+3) td {
+    border-bottom:1px solid  hsl(30, 18%, 87%);
+}
 
+.line-break{
+    border-bottom:1px solid  hsl(30, 18%, 87%);
+}
+.nutrition .nutrition-value{
+    font-weight:bold;
+    color:var(--primary-important-color)
+}
