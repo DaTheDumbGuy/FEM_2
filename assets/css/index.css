@@ -1,0 +1,34 @@
+:root{
+    --min-desktop-breakpoint:1024px;
+    --max-desktop-breakpoint:1440px;
+}
+@font-face {
+    font-family: 'Main-font';
+    src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Title-font';
+    src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+}
+*, *::after, *::before{
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    font-size:16px;
+    font-family: 'Main-font', sans-serif;
+}
+.intro{
+    height:300px;
+}
+.hero-img{
+    width:100vw;
+    height:auto;
+}
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures that the image doesn't have extra space beneath it */
+}
+
+
