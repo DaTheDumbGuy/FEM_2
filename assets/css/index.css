@@ -138,6 +138,7 @@ main .nutrition{
         background:hsl(30, 54%, 90%);
     }
     .i-forgot-dis-shit{
+        max-width:620px;
         padding:30px 0;   
         border-radius:20px;
         background:hsl(0, 0%, 100%);
